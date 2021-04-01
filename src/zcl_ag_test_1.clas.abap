@@ -1,28 +1,28 @@
-class ZCL_AG_TEST_1 definition
-  public
-  final
-  create public .
+CLASS zcl_ag_test_1 DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
 
-public section.
+  PUBLIC SECTION.
 
-  methods TEST
-    exporting
-      value(E_INCLUDE1) type TEXT10
-      value(E_INCLUDE2) type TEXT10 .
-protected section.
-private section.
+    METHODS test
+      EXPORTING
+        VALUE(e_include1) TYPE text10
+        VALUE(e_include2) TYPE text10 .
+  PROTECTED SECTION.
+  PRIVATE SECTION.
 ENDCLASS.
 
 
 
-CLASS ZCL_AG_TEST_1 IMPLEMENTATION.
+CLASS zcl_ag_test_1 IMPLEMENTATION.
 
 
-  method TEST.
+  METHOD test.
 
-    include z_ag_include2.
+    INCLUDE z_ag_include2.
 
     e_include1 = c_include1.
     e_include2 = c_include2.
-  endmethod.
+  ENDMETHOD.
 ENDCLASS.
