@@ -1,16 +1,18 @@
-class ZCL_AG_TEST_1 definition
-  public
-  final
-  create public .
+CLASS zcl_ag_test_1 DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
 
-public section.
+  PUBLIC SECTION.
 
-  methods TEST
-    exporting
-      value(E_INCLUDE1) type TEXT10
-      value(E_INCLUDE2) type TEXT10 .
-protected section.
-private section.
+    METHODS test
+      EXPORTING
+        VALUE(es_include1) TYPE text10
+        VALUE(es_include2) TYPE text10
+        VALUE(es_case1)    TYPE text1
+        VALUE(es_case2)    TYPE text1 .
+  PROTECTED SECTION.
+  PRIVATE SECTION.
 ENDCLASS.
 
 
@@ -18,11 +20,27 @@ ENDCLASS.
 CLASS ZCL_AG_TEST_1 IMPLEMENTATION.
 
 
-  method TEST.
+  METHOD test.
 
-    include z_ag_include2.
+    INCLUDE z_ag_include2.
 
-    e_include1 = c_include1.
-    e_include2 = c_include2.
-  endmethod.
+    es_include1 = c_include1.
+    es_include2 = c_include2.
+
+    INCLUDE /redwood/lmad11.
+
+    DATA: l(4), m(4).
+
+    CASE l.
+      WHEN 'EERD'.
+        CASE m.
+          WHEN 'CROSS'.
+            es_case1 = c_target_addons.
+            es_case2 = c_include1.
+        ENDCASE.
+        es_case1 = c_target_addons.
+        es_case2 = c_include2.
+    ENDCASE.
+
+  ENDMETHOD.
 ENDCLASS.
