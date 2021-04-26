@@ -23,8 +23,8 @@ CLASS ZCL_AG_TEST_1 IMPLEMENTATION.
   METHOD test.
 
     DATA:
-      lv_1(4) type c,
-      lv_m(4) type c.
+      lv_1(4) TYPE c,
+      lv_m(4) TYPE c.
 
     INCLUDE z_ag_include2.
 
