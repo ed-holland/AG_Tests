@@ -29,17 +29,21 @@ CLASS ZCL_AG_TEST_1 IMPLEMENTATION.
 
     INCLUDE z_ag_include3.
 
-    DATA: l(4), m(4).
+    DATA:
+      lv_1(4),
+      lv_m(4).
 
-    CASE l.
+    CASE lv_1.
       WHEN 'EERD'.
-        CASE m.
+        CASE lv_m.
           WHEN 'CROSS'.
             es_case1 = c_target_addons.
             es_case2 = c_include1.
+          WHEN 'X'.
         ENDCASE.
         es_case1 = c_target_addons.
         es_case2 = c_include2.
+      WHEN 'X'.
     ENDCASE.
 
   ENDMETHOD.
