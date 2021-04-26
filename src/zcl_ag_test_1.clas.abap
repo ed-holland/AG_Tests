@@ -22,16 +22,16 @@ CLASS ZCL_AG_TEST_1 IMPLEMENTATION.
 
   METHOD test.
 
+    DATA:
+      lv_1(4) type c,
+      lv_m(4) type c.
+
     INCLUDE z_ag_include2.
 
     es_include1 = c_include1.
     es_include2 = c_include2.
 
     INCLUDE z_ag_include3.
-
-    DATA:
-      lv_1(4),
-      lv_m(4).
 
     CASE lv_1.
       WHEN 'EERD'.
