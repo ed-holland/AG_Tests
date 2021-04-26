@@ -27,7 +27,7 @@ CLASS ZCL_AG_TEST_1 IMPLEMENTATION.
     es_include1 = c_include1.
     es_include2 = c_include2.
 
-    INCLUDE /redwood/lmad11.
+    INCLUDE z_ag_include3.
 
     DATA: l(4), m(4).
 
