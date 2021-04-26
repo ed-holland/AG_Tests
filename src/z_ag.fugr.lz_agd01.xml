@@ -1,18 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+<abapGit version="v1.0.0">
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <PROGDIR>
-    <NAME>Z_AG_INCLUDE3</NAME>
+    <NAME>LZ_AGD01</NAME>
     <SUBC>I</SUBC>
+    <APPL>S</APPL>
     <RLOAD>E</RLOAD>
     <UCCHECK>X</UCCHECK>
    </PROGDIR>
    <TPOOL>
     <item>
      <ID>R</ID>
-     <ENTRY>Include Z_AG_INCLUDE3</ENTRY>
-     <LENGTH>21</LENGTH>
+     <ENTRY>Include LZ_AGD01</ENTRY>
+     <LENGTH>16</LENGTH>
     </item>
    </TPOOL>
   </asx:values>
