@@ -23,6 +23,7 @@ CLASS ZCL_AG_TEST_1 IMPLEMENTATION.
   METHOD test.
 
     DATA:
+      lt_tab  TYPE rseloption,
       lv_1(4) TYPE c,
       lv_m(4) TYPE c.
 
@@ -32,6 +33,8 @@ CLASS ZCL_AG_TEST_1 IMPLEMENTATION.
     es_include2 = c_include2.
 
     INCLUDE z_ag_include3.
+
+    DATA: l_msg LIKE LINE OF lt_tab.
 
     CASE lv_1.
       WHEN 'EERD'.
